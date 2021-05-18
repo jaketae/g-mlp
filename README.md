@@ -41,11 +41,10 @@ The repository also contains gMLP models specifically for language modeling and 
 `gMLPForLanguageModeling` shares the same default parameters as `gMLP`, with `num_tokens=10000` as an added parameter that represents the size of the token embedding table.
 
 ```python
->>> import torch
 >>> from g_mlp import gMLPForLanguageModeling
 >>> model = gMLPForLanguageModeling()
->>> x = torch.randint(0, 10000, (8, 256))
->>> model(x).shape
+>>> tokens = torch.randint(0, 10000, (8, 256))
+>>> model(tokens).shape
 torch.Size([8, 256, 256])
 ```
 
@@ -54,11 +53,10 @@ torch.Size([8, 256, 256])
 `gMLPForImageClassification` is a ViT-esque version of gMLP that includes a patch creating layer and a final classification head. Below is an example usage.
 
 ```python
->>> import torch
 >>> from g_mlp import gMLPForImageClassification
 >>> model = gMLPForImageClassification()
->>> x = torch.randn(8, 3, 256, 256)
->>> model(x).shape
+>>> images = torch.randn(8, 3, 256, 256)
+>>> model(images).shape
 torch.Size([8, 1000])
 ```
 
