@@ -50,7 +50,7 @@ torch.Size([8, 256, 256])
 
 ### Computer Vision
 
-`gMLPForImageClassification` is a ViT-esque version of gMLP that includes a patch creating layer and a final classification head. Below is an example usage.
+`gMLPForImageClassification` is a ViT-esque version of gMLP that includes a patch creating layer and a final classification head.
 
 ```python
 >>> from g_mlp import gMLPForImageClassification
