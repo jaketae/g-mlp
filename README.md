@@ -58,6 +58,10 @@ torch.Size([8, 256, 256])
 torch.Size([8, 1000])
 ```
 
+## Summary
+
+The authors of the paper present gMLP, an an attention-free all-MLP architecture based on spatial gating units. gMLP achieves parity with transformer models such as ViT and BERT on language and vision downstream tasks. The authors also show that gMLP scales with increased data and number of parameters, suggesting that self-attention is not a necessary component for designing performant models.
+
 ## Resources
 
 -   [Original Paper](https://arxiv.org/abs/2105.08050)
