@@ -5,7 +5,7 @@ from torch.nn import functional as F
 class SpatialGatingUnit(nn.Module):
     def __init__(self, d_ffn, seq_len):
         super().__init__()
-        self.norm = nn.LayerNorm(d_ffn)
+        self.norm = nn.LayerNorm(d_ffn/2)
         self.spatial_proj = nn.Conv1d(seq_len, seq_len, kernel_size=1)
         nn.init.constant_(self.spatial_proj.bias, 1.0)
 
